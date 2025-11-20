@@ -1,0 +1,287 @@
+@font-face {
+    font-family: "Comfortaa";
+    src: url(./font/Comfortaa.ttf);
+    font-weight: normal; /* Добавляем нормальную насыщенность */
+}
+
+@font-face {
+    font-family: "Comfortaa";
+    src: url(./font/Comfortaa.ttf);
+    font-weight: bold; /* Для жирного текста */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Выше сетки */
+}
+/* Header */
+.header-top {
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение */
+    align-items: center;
+    height: 110px;
+    padding: 0 80px; /* Такие же отступы как у сетки */
+    backdrop-filter: blur(10px);
+    background-color: hsla(0, 0%, 0%, 0.3);
+    z-index: 1000;
+}
+.image-button {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* Логотип - прижимаем к левому краю */
+.header-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: Comfortaa;
+    font-size: 32px;
+}
+
+
+/* Навигация - располагаем по центру */
+.header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 90px; /* Расстояние между пунктами меню */
+}
+
+.header-nav-galereya {
+    white-space: nowrap;
+    color: white;
+    font-family: Comfortaa;
+    font-size: 21px;
+    /* Убрали margin */
+}
+
+/* Кнопка - прижимаем к правому краю */
+.header-application {
+    width: 343px;
+    height: 43px;
+    color: #434343;
+    font-family: Comfortaa;
+    background: #FFFFFF4D;
+    backdrop-filter: blur(18px);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    font-size: 21px;
+    text-transform: lowercase;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+
+}
+
+.header-mess img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.header-mess {
+
+    display: flex;
+    gap: 95px;
+}
+.article {
+    width: 100%;
+    height: 100vh;
+    background-color: #121212;
+}
+.article-main {
+    display: grid;
+}
+
+.info-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.info-center-txt {
+    font-size: 36px;
+    color: #ffffff;
+    align-content: center;
+    padding: 100px 80px;
+}
+.info-center-txt p {
+    padding-top: 50px;
+}
+.slider-main {
+    width: 100%;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: calc(50% - 45px);
+    padding: 0 20px;
+
+}
+.slider-btn {
+    border: none;
+    background-color: transparent;
+}
+.slider-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+.participant-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.participant-card-left {
+    width: 280px;
+    height: 380px;
+}
+
+.participant-card-center {
+    width: 430px;
+    height: 530px;
+}
+
+.participant-card-right {
+    width: 280px;
+    height: 380px;
+}
+
+.participant-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.participant-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-family: Comfortaa, sans-serif;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.participant-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.participant-role {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+.participant-quote {
+    font-size: 13px;
+    font-style: italic;
+}
+
+
+.footer {
+    background-color: #0a1224; /* Темно-синий фон */
+    color: white;
+    padding: 40px 80px 20px;
+    font-family: Comfortaa, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-title {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.footer-subtitle {
+    font-size: 16px;
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom-link {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-bottom-link:hover {
+    color: #ddd;
+}

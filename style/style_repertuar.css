@@ -1,0 +1,280 @@
+@font-face {
+    font-family: "Comfortaa";
+    src: url(./font/Comfortaa.ttf);
+    font-weight: normal; /* Добавляем нормальную насыщенность */
+}
+
+@font-face {
+    font-family: "Comfortaa";
+    src: url(./font/Comfortaa.ttf);
+    font-weight: bold; /* Для жирного текста */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Выше сетки */
+}
+/* Header */
+.header-top {
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение */
+    align-items: center;
+    height: 110px;
+    padding: 0 80px; /* Такие же отступы как у сетки */
+    backdrop-filter: blur(10px);
+    background-color: hsla(0, 0%, 0%, 0.3);
+    z-index: 1000;
+}
+.image-button {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* Логотип - прижимаем к левому краю */
+.header-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: Comfortaa;
+    font-size: 32px;
+}
+
+
+/* Навигация - располагаем по центру */
+.header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 90px; /* Расстояние между пунктами меню */
+}
+
+.header-nav-galereya {
+    white-space: nowrap;
+    color: white;
+    font-family: Comfortaa;
+    font-size: 21px;
+    /* Убрали margin */
+}
+
+/* Кнопка - прижимаем к правому краю */
+.header-application {
+    width: 343px;
+    height: 43px;
+    color: #434343;
+    font-family: Comfortaa;
+    background: #FFFFFF4D;
+    backdrop-filter: blur(18px);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    font-size: 21px;
+    text-transform: lowercase;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+
+}
+
+.header-mess img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.header-mess {
+
+    display: flex;
+    gap: 95px;
+}
+.article {
+    width: 100%;
+    background-color: #121212;
+}
+.article-main {
+    display: grid;
+}
+
+.info-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.info-center-txt {
+    font-size: 36px;
+    color: #ffffff;
+    align-content: center;
+    padding: 0px 80px;
+    padding-top: 150px;
+}
+.repertuar {
+    padding: 100px 215px;
+    color: #ffffff;
+    max-width: 2000px; /* Ограничиваем общую ширину */
+    margin: 0 auto; /* Центрируем по горизонтали */
+}
+
+/* === Две колонки для репертуара === */
+
+.repertuar-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px; /* Уменьшено с 80px */
+}
+
+.repertuar-column {
+    width: 350px; /* Фиксированная ширина — не растягивается */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Левая колонка — прижата к левому краю */
+}
+
+.repertuar-column-right {
+    align-items: flex-end; /* Правая колонка — прижата к правому краю */
+}
+
+.alphabet-section {
+    margin-bottom: 35px; /* Уменьшено с 40px */
+}
+
+/* === Буква раздела === */
+
+.alphabet-letter {
+    font-size: 36px; /* Было 48px */
+    font-weight: 500; /* Было bold — теперь мягче */
+    color: #ffffff;
+    margin-bottom: 18px; /* Уменьшено с 15px */
+    letter-spacing: -0.5px; /* Лёгкая сжатость для элегантности */
+    font-family: Comfortaa, sans-serif;
+}
+
+/* === Строка с точкой и текстом === */
+
+.repertuar-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px; /* Уменьшено с 20px */
+    padding-top: 8px; /* Уменьшено с 10px */
+}
+
+.repertuar-item img {
+    width: 14px;
+    height: 14px;
+    opacity: 0.6; /* Ещё чуть прозрачнее — не бросается в глаза */
+    margin-top: 3px;
+}
+
+.repertuar-item p {
+    font-size: 22px; /* Было 32px — теперь идеально! */
+    font-family: Comfortaa, sans-serif;
+    font-weight: normal;
+    line-height: 1.5; /* Улучшает читаемость */
+    margin: 0;
+    white-space: pre-line;
+    color: #ffffff; /* Белый — но не агрессивный */
+}
+
+/* === Исполнитель === */
+
+.repertuar-artist {
+    color: #ffffff;
+    font-weight: 500; /* Лёгкий полужирный, не жирный */
+}
+
+/* === Песня === */
+
+.repertuar-song {
+    color: #e0e0e0; /* Было #cccccc — теперь светлее и тоньше */
+    font-weight: 400;
+}
+
+.footer {
+    background-color: #0a1224;
+    color: white;
+    padding: 40px 80px 20px;
+    font-family: Comfortaa, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-title {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.footer-subtitle {
+    font-size: 16px;
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom-link {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-bottom-link:hover {
+    color: #ddd;
+}
